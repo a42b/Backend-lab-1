@@ -1,0 +1,10 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN python -m pip install -r requirements.txt
+
+COPY . /app
+
+CMD flask --app app_lab1  run --host=0.0.0.0 --port=$PORT 
