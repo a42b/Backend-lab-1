@@ -1,9 +1,9 @@
 from flask import jsonify
 from datetime import datetime
-from app import app
+from app_lab1 import app
 
-@app.route('.healthcheck', mathods=['GET'])
-def helthcheck();
+@app.route('/healthcheck', methods=['GET'])
+def helthcheck():
     return jsonify({
         "status": "OK",
         "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
